@@ -14,7 +14,16 @@ function calculate(calculationSteps) {
 
 
   // returns NaN if the array does not represent a proper operation
-  return NaN
+
+  switch (calculationSteps) {
+    case 'numbers':
+    case 'nullAsZero':
+    case 'undefinedIngore':
+    case 'emptyStringIngore':
+    case 'nonNumericIgnore':
+    default:
+      return NaN
+  }
 }
 
 module.exports = calculate

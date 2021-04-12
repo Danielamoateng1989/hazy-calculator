@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 
 
 function calculate(calculationSteps) {
@@ -12,5 +13,9 @@ function calculate(calculationSteps) {
   if (operator.length === 0) return
 
   // Let's convert null value to zero
-  let newArray = Array.from(calculationSteps, (item) => item === null ? 0: item)
+  let newArray = Array.from(calculationSteps, (item) => item === null ? 0 : item)
+
+
+  // Let's ignore undefined and empty string values
+  newArray = newArray.filter(val => val || val === 0)
 }
